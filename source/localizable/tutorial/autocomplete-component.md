@@ -122,11 +122,9 @@ Next, in our `app/templates/rentals.hbs` file, we'll add our new `list-filter` c
 {{#list-filter
    filter=(action 'filterByCity')
    as |rentals|}}
-  <ul class="results">
-    {{#each rentals as |rentalUnit|}}
-      <li>{{rental-listing rental=rentalUnit}}</li>
-    {{/each}}
-  </ul>
+  {{#each rentals as |rentalUnit|}}
+    {{rental-listing rental=rentalUnit}}
+  {{/each}}
 {{/list-filter}}
 ```
 
